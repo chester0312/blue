@@ -29,21 +29,24 @@ const View = () => {
                 </div>
                 <div className="container">
                     <strong>ID: </strong>
-                    <strong>{user.id} </strong>
+                    <span>{id} </span>
                     <br />
                     <br />
-                    <strong>ID: </strong>
-                    <strong>{user.id} </strong>
+                    <strong>Name: </strong>
+                    <span>{user && user.name} </span>
                     <br />
                     <br />
-                    <strong>ID: </strong>
-                    <strong>{user.id} </strong>
+                    <strong>Email: </strong>
+                    <span>{user && user.email} </span>
                     <br />
                     <br />
-                    <strong>ID: </strong>
-                    <strong>{user.id} </strong>
+                    <strong>Contact: </strong>
+                    <span>{user && user.contact} </span>
                     <br />
                     <br />
+                    <Link to = "/">
+                        <button className="btn btn-edit">Go Back</button>
+                    </Link>
                 </div>
             </div>
             
