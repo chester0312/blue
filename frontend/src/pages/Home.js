@@ -26,7 +26,7 @@ const Home = () => {
                 getUsers();
             }
         }
-    }
+    };
 
     console.log("data=>", data);
 

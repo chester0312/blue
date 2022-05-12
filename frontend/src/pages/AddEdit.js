@@ -4,16 +4,16 @@ import axios from "axios";
 import './AddEdit.css';
 import { toast } from "react-toastify";
 
-const initialstata = {
+const initialStata = {
     name: "",
     email: "",
     contact: "",
 };
 
 const AddEdit = () => {
-    const [state, setState] = useState(initialstata);
+    const [state, setState] = useState(initialStata);
 
-    const { name, email, contact } = initialstata;
+    const { name, email, contact } = state;
 
     const history = useNavigate();
 
@@ -21,11 +21,11 @@ const AddEdit = () => {
 
     useEffect(() => {
             if (id) {
-                getSignleUser(id);
+                getSingleUser(id);
             }
         }, [id])
 
-    const getSignleUser = async (id) => {
+    const getSingleUser = async (id) => {
         const response = await axios.get(`http://localhost:5000/user/${id}`);
         if (response.status === 200) {
             setState({ ...response.data[0] });
@@ -54,7 +54,7 @@ const AddEdit = () => {
             if (!id) {
                 addUser(state);
             } else {
-                updataUser(state, id)
+                updataUser(state, id); 
             }
 
             setTimeout(() => history.push("/"),500);
@@ -99,7 +99,7 @@ const AddEdit = () => {
                 type = "number"
                 id = "contact"
                 name = "contact"
-                placeholder="Enter Contact..."
+                placeholder="Enter Contact No..."
                 onChange={handleInputChenge}
                 value = {contact}
              />
