@@ -39,7 +39,7 @@ const AddEdit = () => {
         }
     };
 
-    const updataUser = async (data, id) => {
+    const updateUser = async (data, id) => {
         const response = await axios.put(`http://localhost:5000/user/${id}`, data); 
         if(response.status === 200) {
             toast.success(response.data);
@@ -54,10 +54,10 @@ const AddEdit = () => {
             if (!id) {
                 addUser(state);
             } else {
-                updataUser(state, id); 
+                updateUser(state, id); 
             }
 
-            setTimeout(() => history.push("/"),500);
+            setTimeout(() => history.push("/"), 500);
         }
     };
 

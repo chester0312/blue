@@ -23,12 +23,12 @@ export const deleteUser = (req, res) => {
     res.send("User Delete Successfully")
 }
 
-export const updataeUser = (req, res) => {
+export const updateUser = (req, res) => {
     const user = users.find((user) => user.id === req.params.id);
 
     user.name = req.body.name;
-    user.emali = req.body.emali;
+    user.email = req.body.email;
     user.cintact = req.body.cintact;
 
-    res.send("User updatae Successfully");
+    res.send("User updateUser Successfully");
 }
