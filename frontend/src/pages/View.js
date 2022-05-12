@@ -22,7 +22,30 @@ const View = () => {
     };
 
     return (
-        <div>
+        <div style={{ marginTop: "150px" }}>
+            <div className="card">
+                <div className="card-header">
+                    <p>User Contact Detail</p>
+                </div>
+                <div className="container">
+                    <strong>ID: </strong>
+                    <strong>{user.id} </strong>
+                    <br />
+                    <br />
+                    <strong>ID: </strong>
+                    <strong>{user.id} </strong>
+                    <br />
+                    <br />
+                    <strong>ID: </strong>
+                    <strong>{user.id} </strong>
+                    <br />
+                    <br />
+                    <strong>ID: </strong>
+                    <strong>{user.id} </strong>
+                    <br />
+                    <br />
+                </div>
+            </div>
             
         </div>
     )
