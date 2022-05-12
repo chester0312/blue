@@ -28,7 +28,7 @@ export const updateUser = (req, res) => {
 
     user.name = req.body.name;
     user.email = req.body.email;
-    user.cintact = req.body.cintact;
+    user.contact = req.body.contact;
 
     res.send("User updateUser Successfully");
 }
